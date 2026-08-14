@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Marquee from "./components/Marquee";
 import Capabilities from "./components/Capabilities";
 import Portfolio from "./components/Portfolio";
 import Process from "./components/Process";
@@ -13,6 +14,7 @@ export default function App() {
       <Header />
       <main id="top">
         <Hero />
+        <Marquee />
         <Capabilities />
         <Portfolio />
         <Process />

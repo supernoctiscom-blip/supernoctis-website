@@ -1,9 +1,23 @@
+import { useRef } from "react";
+
 export default function Hero() {
+  const heroRef = useRef<HTMLElement | null>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const el = heroRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    el.style.setProperty("--mx", `${x}%`);
+    el.style.setProperty("--my", `${y}%`);
+  };
+
   return (
-    <section className="hero">
+    <section className="hero" ref={heroRef} onMouseMove={handleMouseMove}>
       <div className="wrap hero-grid">
         <div>
-          <div className="eyebrow">NOCTIS AI LABS · SOFTWARE STUDIO</div>
+          <div className="eyebrow">SUPERNOCTIS · SOFTWARE STUDIO</div>
           <h1>
             We don't just consult on software.{" "}
             <span className="accent">We ship it.</span>
@@ -37,7 +51,7 @@ export default function Hero() {
             viewBox="0 0 460 460"
             width="100%"
             role="img"
-            aria-label="Diagram showing Noctis AI Labs at the centre, connected to the products it has built"
+            aria-label="Diagram showing SuperNoctis at the centre, connected to the products it has built"
           >
             <circle cx="230" cy="230" r="150" className="orbit-ring" style={{ fill: "none" }} />
             <circle cx="230" cy="230" r="95" className="orbit-ring" style={{ fill: "none" }} />
@@ -56,7 +70,7 @@ export default function Hero() {
 
             {/* core node */}
             <circle cx="230" cy="230" r="30" fill="var(--ink-2)" stroke="var(--cyan)" strokeWidth="1.5" className="node-pulse" />
-            <text x="230" y="235" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="12" fill="#5EEAD4">NOCTIS</text>
+            <text x="230" y="235" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="13" fill="#5EEAD4">SN</text>
 
             {/* satellite: Fluencyo */}
             <circle cx="230" cy="80" r="22" fill="var(--ink)" stroke="var(--violet)" strokeWidth="1.4" />

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,10 +17,7 @@ export default function Header() {
     <header className={scrolled ? "scrolled" : ""}>
       <div className="wrap">
         <nav>
-          <a href="#top" className="logo" onClick={closeMenu}>
-            <span className="dot" />
-            NOCTIS<span className="logo-dim">.AI</span>
-          </a>
+          <Logo onClick={closeMenu} />
 
           <div className={`nav-links ${menuOpen ? "open" : ""}`}>
             <a href="#work" onClick={closeMenu}>Work</a>

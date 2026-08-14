@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -6,10 +8,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-grid">
           <div className="foot-brand">
-            <a href="#top" className="logo">
-              <span className="dot" />
-              NOCTIS<span className="logo-dim">.AI</span>
-            </a>
+            <Logo />
             <p>
               A software studio building apps, websites, AI models and
               everything in between — for founders, businesses and
@@ -36,13 +35,13 @@ export default function Footer() {
           <div className="foot-col">
             <h4>Contact</h4>
             <ul>
-              <li><a href="mailto:hello@noctisailabs.com">hello@noctisailabs.com</a></li>
+              <li><a href="mailto:hello@supernoctis.com">hello@supernoctis.com</a></li>
               <li><a href="#contact">Start a project</a></li>
             </ul>
           </div>
         </div>
         <div className="foot-bottom">
-          <span>© {year} Noctis AI Labs. All rights reserved.</span>
+          <span>© {year} SuperNoctis. All rights reserved.</span>
           <span>Built in the lab, not a template.</span>
         </div>
       </div>
