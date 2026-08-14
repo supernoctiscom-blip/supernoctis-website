@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
         <div className="foot-bottom">
           <span>© {year} SuperNoctis. All rights reserved.</span>
-          <span>Built in the lab, not a template.</span>
+          <span>Built in the lab, not a template. v2</span>
         </div>
       </div>
     </footer>
